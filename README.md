@@ -1,39 +1,79 @@
 # three.js-practice
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple, responsive 3D text demo built with [Three.js](https://threejs.org/) and [Vue 3](https://vuejs.org/), deployed to GitHub Pages.
 
-## Recommended IDE Setup
+## 🚀 Demo
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[Live Demo](https://putkovamariia.github.io/three.js-practice/)
 
-## Type Support for `.vue` Imports in TS
+## Features
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- 3D text rendered with Three.js
+- Responsive design for desktop and mobile
+- Editable text input with instant 3D update
+- OrbitControls for interactive rotation
+- Deployed to GitHub Pages
 
-## Customize configuration
+## Getting Started
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Prerequisites
 
-## Project Setup
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/)
 
-```sh
+### Install
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Run Locally
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```sh
+### Build for Production
+
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint and Format
 
-```sh
+```bash
 npm run lint
+npm run format
 ```
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages using a GitHub Actions workflow.  
+The production build is served from the `/three.js-practice/` subdirectory.
+
+## Folder Structure
+
+```
+public/
+  fonts/
+    helvetiker_regular.typeface.json
+src/
+  components/
+    EditField.vue
+    Name3D.vue
+  main.ts
+  App.vue
+```
+
+## Customization
+
+- To change the default 3D text, edit the initial value in `Name3D.vue`.
+- To use a different font, add your `.typeface.json` file to `public/fonts/` and update the loader path.
+
+## Credits
+
+- [Three.js](https://threejs.org/)
+- [Vue 3](https://vuejs.org/)
+- [helvetiker_regular.typeface.json](https://threejs.org/examples/fonts/helvetiker_regular.typeface.json)
