@@ -8,7 +8,7 @@ import type { Font } from 'three/examples/jsm/loaders/FontLoader.js'
 import EditField from './EditField.vue'
 
 const inputValue = ref('')
-const message = ref('Frontend')
+const message = ref('Rotate Me')
 const rendererContainer = ref<HTMLElement | null>(null)
 
 let fontInstance: Font | null = null
@@ -32,6 +32,12 @@ function onWindowResize() {
 function updateText() {
   message.value = inputValue.value
 }
+function getResponsiveTextSize() {
+  const width = window.innerWidth
+  if (width < 500) return 0.5
+  if (width < 900) return 1.2
+  return 1.5
+}
 function createTextMesh() {
   if (!fontInstance) return
   if (textMesh) {
@@ -45,7 +51,7 @@ function createTextMesh() {
   }
   const geometry = new TextGeometry(message.value, {
     font: fontInstance,
-    size: 1.5,
+    size: getResponsiveTextSize(),
     height: 1,
     curveSegments: 8,
     bevelEnabled: false,

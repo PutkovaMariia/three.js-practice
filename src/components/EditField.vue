@@ -44,6 +44,8 @@ function emitUpdate() {
 <style scoped lang="scss">
 .edit-field {
   position: absolute;
+  display: flex;
+  flex-direction: row;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -103,6 +105,28 @@ function emitUpdate() {
 
   100% {
     background-position: right bottom;
+  }
+}
+@media (max-width: 600px) {
+  .edit-field {
+    width: 92vw;
+    max-width: 98vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    padding: 10px 6vw;
+    gap: 8px;
+  }
+  .overlay-input {
+    font-size: 1rem;
+    padding: 14px 12px;
+    min-width: 0;
+    width: 60%;
+  }
+  .beautiful-button {
+    font-size: 1rem;
+    padding: 14px 0;
+    width: 40%;
   }
 }
 </style>
