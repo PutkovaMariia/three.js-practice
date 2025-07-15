@@ -80,7 +80,7 @@ onMounted(() => {
   controls.update()
 
   const loader = new FontLoader()
-  loader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
+  loader.load(import.meta.env.BASE_URL + 'fonts/helvetiker_regular.typeface.json', (font) => {
     fontInstance = font as Font
     createTextMesh()
     animate()
